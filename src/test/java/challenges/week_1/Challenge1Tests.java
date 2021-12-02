@@ -5,7 +5,7 @@ import  static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.jupiter.api.Test;
 
 public class Challenge1Tests {
-    Challenge1 firstChall = new Challenge1();
+    private Challenge1 firstChall = new Challenge1();
 
     //Single set tests
     //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -13,6 +13,8 @@ public class Challenge1Tests {
     public void numTest() {
         assertEquals(10, firstChall.Challenge_1(5, 1));
         assertEquals(249500, firstChall.Challenge_1(1000, 2));  //Calculated this one manually. Was not an enjoyable passtime.
+        assertNotEquals(firstChall.Challenge_1(10, 2), firstChall.Challenge_1(10, 1));
+        assertNotEquals(0, firstChall.Challenge_1(10, 1));
     }
 
     @Test
@@ -36,8 +38,9 @@ public class Challenge1Tests {
     public void numTestMulti() {
         assertEquals(16, firstChall.Challenge_1(5, new int[]{1, 2}));
         //FIRST ISSUE I made the system rewrite the arraylist of numbers created by "getMultiples()", and therefore would only do the last number in the "multiplesof" array
-
         assertEquals(12249, firstChall.Challenge_1(300, new int[]{10, 15, 9}));
+        assertNotEquals(firstChall.Challenge_1(10, new int[]{1, 2}), firstChall.Challenge_1(10, new int[]{3, 4}));
+        assertNotEquals(0, firstChall.Challenge_1(10, new int[]{1, 2}));
 
     }
 
