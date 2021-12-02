@@ -33,8 +33,44 @@ public class Challenge2 {
         return seperateWords;
     }
 
-    public static void challenge_2()
+    public static String ascendWordSizesToString(String sentence)
     {
-        System.out.println(ascendWordSizes("This is a test to see if challenge 2 is completed"));
+        //Create an arrayList to store the seperate words
+        String[] seperateWords = sentence.split(" ");
+        //A bubble sort algorithm. Will constantly set sorted between true and false until no more changes need to be made.
+        boolean sorted = false;
+        while (!sorted)
+        {
+            sorted = true;
+            for(int i = 0; i < seperateWords.length-1; i++)
+            {
+                //If the selected word is longer than the next one
+                if (seperateWords[i].length() > seperateWords[i+1].length())
+                {
+                    //Save the selected string temporarily
+                    String temp = seperateWords[i];
+                    //Move the next string back by one
+                    seperateWords[i] = seperateWords[i+1];
+                    //replace the next string with the selected string
+                    seperateWords[i+1] = temp;
+                    //Change has been made so the list is not yet sorted
+                    sorted = false;
+                }
+            }
+        }
+        //Predefine the final sentence
+        String finalSentence = "";
+        for(String word: seperateWords)
+        {
+            //Concatenate the words
+            finalSentence += word;
+            //Minus one to get the final one in the length (Index is from 0)
+            if(word != seperateWords[seperateWords.length - 1])
+            {
+                finalSentence += " ";
+            }
+        }
+        //Return the newly concatenated list as one string.
+        return finalSentence;
     }
 }
