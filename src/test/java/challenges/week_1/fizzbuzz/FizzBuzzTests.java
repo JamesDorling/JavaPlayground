@@ -10,6 +10,8 @@ public class FizzBuzzTests {
     FizzBuzz fibu = new FizzBuzz();
     ArrayList<String> tester = FizzBuzz.fizzBuzzString(15);
 
+    //MOST EFFICIENT TEST TESTS THE FIRST 15 AGAINST ANOTHER ARRAY OF 15. IF THE FIRST 15 ARE CORRECT, THEN EVERYTHING IS CORRECT.
+
     @Test
     public void fizzBuzzTestObject() {
         //Index starts at 0, 14 is the 15th place

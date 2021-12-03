@@ -39,6 +39,7 @@ public class BinarySearch {
             }
             //Little sout for checking the number of attempts
             //System.out.println(attemptsTried);
+
             //If the max number of attempts has passed then fail.
             if(attemptsTried > maxAttempts)
             {
@@ -50,13 +51,9 @@ public class BinarySearch {
                 //Else just tick up the attempts.
                 attemptsTried += 1;
             }
-            System.out.println(max);
+            //System.out.println(max);
         }
         //Return the location
         return seperatorIndex;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(binarySearch(new int[]{7, 9, 100, 1250, 1900, 2000, 2100, 2500, 789123, 18927491},  18927491));
     }
 }
