@@ -22,18 +22,15 @@ public class BinarySearch {
             //Grab the current number selected here rather than in every if statement
             int currentNum = sortedList[seperatorIndex];
             //Check the item at seperatorIndex's position
-            if(currentNum == itemToFind)
-            {
+            if(currentNum == itemToFind) {
                 //If found return its location/index
                 return seperatorIndex;
             }
-            else if(currentNum > itemToFind)
-            {
+            else if(currentNum > itemToFind) {
                 //if its too high then move the max down
                 max = seperatorIndex;
             }
-            else
-            {
+            else {
                 //If its too low then move the min up
                 min = seperatorIndex;
             }
@@ -41,13 +38,11 @@ public class BinarySearch {
             //System.out.println(attemptsTried);
 
             //If the max number of attempts has passed then fail.
-            if(attemptsTried > maxAttempts)
-            {
+            if(attemptsTried > maxAttempts) {
                 //Return -1 to symbolise failure
                 return -1;
             }
-            else
-            {
+            else {
                 //Else just tick up the attempts.
                 attemptsTried += 1;
             }
