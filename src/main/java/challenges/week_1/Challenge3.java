@@ -12,7 +12,7 @@ public class Challenge3 {
         if(coins.length % 2 != 0)
         {
             System.out.println("Not a multiple of 2!");
-            return 0;
+            return -1;
         }
 
         //For loop goes through outcomes and records them to variables
