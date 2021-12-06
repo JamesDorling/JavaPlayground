@@ -1,4 +1,4 @@
-package challenges.week_1;
+package challenges;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,8 @@
-package challenges.week_1;
+package challenges;
 
 import  static org.junit.jupiter.api.Assertions.assertTrue;
 
+import challenges.AscendWordSizes;
 import org.junit.jupiter.api.Test;
 
 public class Challenge2Tests {

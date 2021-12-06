@@ -1,4 +1,4 @@
-package challenges.week_1.fizzbuzz;
+package challenges;
 
 import java.util.ArrayList;
 
