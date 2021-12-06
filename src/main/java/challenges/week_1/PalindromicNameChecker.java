@@ -39,14 +39,6 @@ public class PalindromicNameChecker {
             backName += name.toLowerCase().charAt(name.length()-(i + 1));
         }
         //Use .equals (because == doesnt work with string) to compare the name backwards to the regular name, returning a boolean
-        //if(backName.equals(name.toLowerCase()))
-        //{
-        //    System.out.println("Name is palindromic.");
-        //}
-        //else
-        //{
-        //    System.out.println("Name is not palindromic.");
-        //}
         return backName.equals(name.toLowerCase());
     }
 
