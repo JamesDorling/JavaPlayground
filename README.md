@@ -16,7 +16,7 @@ This is where I come to practice Java, be it with coding challenges or just gene
 * [Binary Search Algorithm](#binarysearch)
 * [Main](#main)
 
-###[Tests](#tests)
+### [Tests](#tests)
 
 
 
