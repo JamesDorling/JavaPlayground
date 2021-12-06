@@ -1,4 +1,4 @@
-package core;
+package core.array_functions;
 
 public class ArrayExamples {
     private int[] gameObjects = {1, 2, 3, 4, 5};
