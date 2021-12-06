@@ -16,7 +16,7 @@ This is where I come to practice Java, be it with coding challenges or just gene
 * [Binary Search Algorithm](#binarysearch)
 * [Main](#main)
 
-### [Tests](#tests)
+### [Tests](#testing)
 
 
 
@@ -44,7 +44,7 @@ A simple binary search algorithm I created for arrays of ints.
 Although this is the entry point of the repo, not much is done here. Currently used with an array for the ArrayExamples file.
 
 
-## Tests
+## Testing
 All code in this repository is either already tested or going to be tested. I am currently working on cutting down the number of tests I do while maintaining the quality.
 
 The testing files are laid out in the exact same way as the main coding files, so if you are looking for the tests for a certain class then follow the same path under "test" and you will make it there.
