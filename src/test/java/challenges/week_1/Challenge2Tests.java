@@ -5,7 +5,7 @@ import  static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 public class Challenge2Tests {
-    private Challenge2 secondChall = new Challenge2();
+    private AscendWordSizes secondChall = new AscendWordSizes();
 
     @Test
     public void correctOrderTest()

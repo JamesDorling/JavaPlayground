@@ -5,7 +5,7 @@ import  static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class Challenge3Tests {
-    Challenge3 thirdChall = new Challenge3();
+    CoinFlipEqualiser thirdChall = new CoinFlipEqualiser();
 
     @Test
     public void amountTests()

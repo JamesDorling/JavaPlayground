@@ -3,7 +3,7 @@ package challenges.week_1;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Challenge2 {
+public class AscendWordSizes {
     public static ArrayList<String> ascendWordSizes(String sentence)
     {
         //Create an arrayList to store the seperate words

@@ -2,7 +2,7 @@ package challenges.week_1;
 
 import java.util.Scanner;
 
-public class Challenge3 {
+public class CoinFlipEqualiser {
     public static int neededFlips(int[] coins)
     {
         //Predefine the coin flips and outcomes

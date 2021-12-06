@@ -6,7 +6,7 @@ import  static org.junit.jupiter.api.Assertions.assertFalse;
 import  static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Challenge4Tests {
-    Challenge4 fourthChall = new Challenge4();
+    PalindromicNameChecker fourthChall = new PalindromicNameChecker();
 
     @Test
     public void palindromeTests()

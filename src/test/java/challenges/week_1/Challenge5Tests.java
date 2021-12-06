@@ -6,7 +6,7 @@ import  static org.junit.jupiter.api.Assertions.assertTrue;
 import  static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class Challenge5Tests {
-    Challenge5 fifthChall = new Challenge5();
+    NameFlipperSplitless fifthChall = new NameFlipperSplitless();
 
     /*
     A couple functions in Challenge5 didnt fit the challenge. They are still there, but I see no reason to test them

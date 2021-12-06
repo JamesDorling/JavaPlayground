@@ -1,39 +1,50 @@
 # Java Playground
 
-This is where I come to practice Java. It is set up for testing.
+This is where I come to practice Java, be it with coding challenges or just general practice. This is also set up so that I can test my code.
 
 ## Contents
+### [Challenges](#challenges)
+* [Challenge 0, FizzBuzz](#fizzbuzz)
+* [Challenge 1, Sum of Multiples](#SumOfMultiples)
+* [Challenge 2, Ascended Word Sizes](#AscendWordSizes)
+* [Challenge 3, Equalising Coin Flips](#CoinFlipEqualiser)
+* [Challenge 4, Palindromic Name Checker](#PalindromicNameChecker)
+* [Challenge 5, Name Flipper Without String.split()](#NameFlipperSplitless)
 
-* [Week 1](#week-1)
-* * [FizzBuzz](#fizzbuzz)
-* * [Challenge 1](#challenge-1)
-* * [Challenge 2](#challenge-2)
-* * [Challenge 3](#challenge-3)
-* * [Challenge 4](#challenge-4)
-* * [Challenge 5](#challenge-5)
-* [Week 2](#week-2)
-* [Week 3](#week-3) 
-* [Week 4](#week-4)
-* [Week 5](#week-5)
-* [Week 6](#week-6)
-* [Week 7](#week-7)
-* [Week 8](#week-8)
+### [Core](#core)
+* [Array Examples](#arrayexamples)
+* [Binary Search Algorithm](#binarysearch)
+* [Main](#main)
+
+###[Tests](#tests)
 
 
-## Weeks
 
-### Week 1
+## Challenges
 #### FizzBuzz
 A coding challenge where numbers must be listed, but if the number is a multiple of 3 it lists "Fizz", and if it is a multiple of 5 it lists "Buzz", with multiples of both being "FizzBuzz".
-#### Challenge 1
+#### SumOfMultiples
 A coding challenge where I must sum up the numbers below 1000 that are multiples of 3 or 5.
-#### Challenge 2
+#### AscendWordSizes
 A coding challenge where I must make a sentence be rearranged into ascending order based on word size.
-#### Challenge 3
+#### CoinFlipEqualiser
 A coding challenge where I must return the number of coins needed to be flipped over to make a set of coins have an even amount of heads or tails.
-#### Challenge 4
+#### PalindromicNameChecker
 A coding challenge where I must check whether a word is palindromic, or how many palindromes are in a sentence.
-#### Challenge 5
+#### NameFlipperSplitless
 A coding challenge where I must flip a name (Put the surname before the forename) or a list of names without using string.split.
 
-### Week 2
+
+## Core
+### ArrayExamples
+Small place to experiment with the different collections.
+### BinarySearch
+A simple binary search algorithm I created for arrays of ints.
+### Main
+Although this is the entry point of the repo, not much is done here. Currently used with an array for the ArrayExamples file.
+
+
+## Tests
+All code in this repository is either already tested or going to be tested. I am currently working on cutting down the number of tests I do while maintaining the quality.
+
+The testing files are laid out in the exact same way as the main coding files, so if you are looking for the tests for a certain class then follow the same path under "test" and you will make it there.

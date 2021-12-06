@@ -2,7 +2,7 @@ package challenges.week_1;
 
 import java.util.ArrayList;
 
-public class Challenge1 {
+public class SumOfMultiples {
     private static ArrayList<Integer> getMultiples(int numMultiplesBelow, int num1)
     {
         //This function adds each multiple of "num1" below "numMultiplesBelow" to an array list using a for loop.

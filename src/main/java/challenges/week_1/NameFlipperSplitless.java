@@ -2,7 +2,7 @@ package challenges.week_1;
 
 import java.util.ArrayList;
 
-public class Challenge5 {
+public class NameFlipperSplitless {
     public static String reverseSingleNameSplitless(String name)
     {
         //The strings that the name will be put into

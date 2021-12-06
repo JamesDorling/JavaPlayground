@@ -2,7 +2,7 @@ package challenges.week_1;
 
 import java.util.Scanner;
 
-public class Challenge4 {
+public class PalindromicNameChecker {
     public static boolean checkSingleNamePalindromic()
     {
         System.out.println("What is the name you would like to check?");
