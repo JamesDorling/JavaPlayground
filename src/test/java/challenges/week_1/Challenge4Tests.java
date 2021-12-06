@@ -6,27 +6,26 @@ import  static org.junit.jupiter.api.Assertions.assertFalse;
 import  static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Challenge4Tests {
-    PalindromicNameChecker fourthChall = new PalindromicNameChecker();
 
     @Test
     public void palindromeTests()
     {
         //Does it give true for palindromic names and false for non-palindromic names?
-        assertTrue(fourthChall.checkSingleNamePalindromic("makam"));
-        assertFalse(fourthChall.checkSingleNamePalindromic("james"));
+        assertTrue(PalindromicNameChecker.checkSingleNamePalindromic("makam"));
+        assertFalse(PalindromicNameChecker.checkSingleNamePalindromic("james"));
     }
 
     @Test
     public void syntaxTest()
     {
         //Should work even with capitals
-        assertTrue(fourthChall.checkSingleNamePalindromic("Jamaj"));
+        assertTrue(PalindromicNameChecker.checkSingleNamePalindromic("Jamaj"));
         //Test for special characters. No reason not to work, but worth checking.
-        assertTrue(fourthChall.checkSingleNamePalindromic("/'/&/'/"));
+        assertTrue(PalindromicNameChecker.checkSingleNamePalindromic("/'/&/'/"));
         //This should technically return true, as nothing is still nothing backwards.
-        assertTrue(fourthChall.checkSingleNamePalindromic(""));
+        assertTrue(PalindromicNameChecker.checkSingleNamePalindromic(""));
         //This should say false because there are two names.
-        assertFalse(fourthChall.checkSingleNamePalindromic("jamaj dorlrod"));
+        assertFalse(PalindromicNameChecker.checkSingleNamePalindromic("jamaj dorlrod"));
     }
 
     //Tests for full sentences (Loops through and uses the single sentence function so doesnt need same tests as before
@@ -35,12 +34,12 @@ public class Challenge4Tests {
     public void sentenceTests()
     {
         //Test for amount
-        assertEquals(2, fourthChall.checkHowManyPalindromes("jamaj name makam palindrome"));
+        assertEquals(2, PalindromicNameChecker.checkHowManyPalindromes("jamaj name makam palindrome"));
         //Test for punctuation. Punctuation is removed, so the words will come together.
-        assertEquals(2, fourthChall.checkHowManyPalindromes("j#a~maj, name. ma[]k.am palindrome"));
+        assertEquals(2, PalindromicNameChecker.checkHowManyPalindromes("j#a~maj, name. ma[]k.am palindrome"));
         //Test for none
-        assertEquals(0, fourthChall.checkHowManyPalindromes("None of these words are palindromic"));
+        assertEquals(0, PalindromicNameChecker.checkHowManyPalindromes("None of these words are palindromic"));
         //Test for all
-        assertEquals(5, fourthChall.checkHowManyPalindromes("alla ofo theseht ara palindromicimordnilap"));
+        assertEquals(5, PalindromicNameChecker.checkHowManyPalindromes("alla ofo theseht ara palindromicimordnilap"));
     }
 }

@@ -7,7 +7,6 @@ import  static org.junit.jupiter.api.Assertions.assertFalse;
 import java.util.ArrayList;
 
 public class FizzBuzzTests {
-    FizzBuzz fibu = new FizzBuzz();
     ArrayList<String> tester = FizzBuzz.fizzBuzzString(15);
 
     //MOST EFFICIENT TEST TESTS THE FIRST 15 AGAINST ANOTHER ARRAY OF 15. IF THE FIRST 15 ARE CORRECT, THEN EVERYTHING IS CORRECT.
