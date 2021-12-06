@@ -36,11 +36,11 @@ A coding challenge where I must flip a name (Put the surname before the forename
 
 
 ## Core
-### ArrayExamples
+#### ArrayExamples
 Small place to experiment with the different collections.
-### BinarySearch
+#### BinarySearch
 A simple binary search algorithm I created for arrays of ints.
-### Main
+#### Main
 Although this is the entry point of the repo, not much is done here. Currently used with an array for the ArrayExamples file.
 
 
