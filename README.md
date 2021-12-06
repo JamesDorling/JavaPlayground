@@ -14,11 +14,11 @@ This is where I come to practice Java, be it with coding challenges or just gene
 
 ### [Core](#core)
 * [Binary Search Algorithm](#binarysearch)
-* [Main](#main)
+* [Main](#main) &nbsp;
 ####[Array Function](#ArrayFunctions)
 * [Array Duplicate Remover](#arrayduperemover)
 * [Array Examples](#arrayexamples)
-* [Array Flipper](#arrayflipper)
+* [Array Flipper](#arrayflipper)  &nbsp;
 ####[Bubble Sort](#bubbleSort)
 * [Bubble Sort Interface](#bubblesort-interface)
 * [Bubble Sort Int Array](#bubblesortintarray)
