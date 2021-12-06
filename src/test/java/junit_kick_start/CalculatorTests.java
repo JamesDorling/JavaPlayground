@@ -5,16 +5,15 @@ import  static org.junit.jupiter.api.Assertions.assertNotEquals;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTests {
-    Calculator calc = new Calculator();
 
     @Test
     public void additionTest(){
-        assertEquals(10, calc.add(4, 6));
+        assertEquals(10, Calculator.add(4, 6));
     }
 
     @Test
     public void additionTest2(){
-        assertNotEquals(10, calc.add(2, 3));
+        assertNotEquals(10, Calculator.add(2, 3));
     }
 
 }

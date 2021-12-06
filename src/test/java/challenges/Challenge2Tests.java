@@ -24,6 +24,23 @@ public class Challenge2Tests {
         assertTrue(AscendWordSizes.ascendWordSizesToString("").equals(""));
     }
 
+    @Test
+    public void timeTest()
+    {
+        //Get the time in milliseconds, tun the function then get the time in milliseconds again. Then compare the two to get the duration.
+        long start = System.currentTimeMillis();
+        AscendWordSizes.ascendWordSizesToString("The order will change").equals("The will order change");
+        long end = System.currentTimeMillis();
+        //Should be less than 5 milliseconds
+        assertTrue((end - start) < 5);
+    }
+
+    @Test
+    public void iterationsTest()
+    {
+
+    }
+
     /*
     I have not tested the arraylist one as in this scenario the ArrayList function is not the one used to clear the
     challenge.

@@ -10,8 +10,10 @@ public class AscendWordSizes {
         ArrayList<String> seperateWords = new ArrayList<String>(Arrays.asList(sentence.split(" ")));
         //A bubble sort algorithm. Will constantly set sorted between true and false until no more changes need to be made.
         boolean sorted = false;
+        int iterations = 0;
         while (!sorted)
         {
+            iterations += 1;
             sorted = true;
             for(int i = 0; i < seperateWords.size()-1; i++)
             {
@@ -29,6 +31,7 @@ public class AscendWordSizes {
                 }
             }
         }
+
         //Return the sorted list
         return seperateWords;
     }
