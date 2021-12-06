@@ -1,15 +1,13 @@
 package core.bubble_sort;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
-public class BubbleSortInt implements BubbleSort<Integer>{
+public class BubbleSortStringWordSize implements BubbleSort<String>{
     int iterations = 0;
     int swaps = 0;
     long time_taken = 0;
-    ArrayList<Integer> sorted_list;
+    String[] sorted_list;
 
-    public BubbleSortInt(ArrayList<Integer> listToSort)
+    public BubbleSortStringWordSize(String[] listToSort)
     {
         long start = System.currentTimeMillis();
         //A bubble sort algorithm. Will constantly set sorted between true and false until no more changes need to be made.
@@ -18,18 +16,18 @@ public class BubbleSortInt implements BubbleSort<Integer>{
         {
             iterations += 1;
             sorted = true;
-            for(int i = 0; i < listToSort.size()-1; i++)
+            for(int i = 0; i < listToSort.length-1; i++)
             {
                 //If the selected word is longer than the next one
-                if (listToSort.get(i) > listToSort.get(i+1))
+                if (listToSort[i].length() > listToSort[i + 1].length())
                 {
                     swaps += 1;
                     //Save the selected string temporarily
-                    Integer temp = listToSort.get(i);
+                    String temp = listToSort[i];
                     //Move the next string back by one
-                    listToSort.set(i, listToSort.get(i+1));
+                    listToSort[i] = listToSort[i + 1];
                     //replace the next string with the selected string
-                    listToSort.set(i+1, temp);
+                    listToSort[i + 1] = temp;
                     //Change has been made so the list is not yet sorted
                     sorted = false;
                 }
@@ -42,7 +40,7 @@ public class BubbleSortInt implements BubbleSort<Integer>{
     }
 
     @Override
-    public ArrayList getArrayList() {
+    public String[] getArray() {
         return sorted_list;
     }
 

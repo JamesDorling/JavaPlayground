@@ -1,7 +1,8 @@
-package core;
+package core.array_functions;
 
 import  static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.Assertions;
+
+import core.array_functions.ArrayExamples;
 import org.junit.jupiter.api.Test;
 
 public class ArrayExamplesTests {
