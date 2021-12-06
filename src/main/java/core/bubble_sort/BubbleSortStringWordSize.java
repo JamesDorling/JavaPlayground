@@ -25,7 +25,7 @@ public class BubbleSortStringWordSize implements BubbleSort<String>{
                     //Save the selected string temporarily
                     String temp = listToSort[i];
                     //Move the next string back by one
-                    listToSort[i] = listToSort[i];
+                    listToSort[i] = listToSort[i + 1];
                     //replace the next string with the selected string
                     listToSort[i + 1] = temp;
                     //Change has been made so the list is not yet sorted
