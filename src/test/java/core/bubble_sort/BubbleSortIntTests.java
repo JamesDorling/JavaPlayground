@@ -3,14 +3,15 @@ package core.bubble_sort;
 import org.junit.jupiter.api.Test;
 
 import  static org.junit.jupiter.api.Assertions.assertEquals;
+import  static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import  static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BubbleSortIntTests {
-    ArrayList<Integer> testList = new ArrayList<>(Arrays.asList(7, 2, 4, 3, 6, 8, 100, 2, 5, 6));
-    BubbleSort sorter = new BubbleSortInt(testList);
+    Integer[] testList = new Integer[]{7, 2, 4, 3, 6, 8, 100, 2, 5, 6};
+    BubbleSort sorter = new BubbleSortIntArray(testList);
     @Test
     public void bubbleSortIterationsTest()
     {
@@ -32,6 +33,8 @@ public class BubbleSortIntTests {
     @Test
     public void bubbleSortOrderTest()
     {
-        assertEquals("[2, 2, 3, 4, 5, 6, 6, 7, 8, 100]", sorter.getArrayList().toString());
+        System.out.println(sorter.getArray());
+        Integer[] expected = new Integer[]{2, 2, 3, 4, 5, 6, 6, 7, 8, 100};
+        assertArrayEquals(expected, sorter.getArray());
     }
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BubbleSortStringWordSizeTests {
-    ArrayList<String> testList = new ArrayList<>(Arrays.asList("Hello,", "I", "am", "coding", "in", "Java"));
+    String[] testList = new String[]{"Hello,", "I", "am", "coding", "in", "Java"};
     BubbleSort sorter = new BubbleSortStringWordSize(testList);
     @Test
     public void bubbleSortIterationsTest()
@@ -34,6 +34,6 @@ public class BubbleSortStringWordSizeTests {
     public void bubbleSortOrderTest()
     {
         String[] expected = new String[]{"I", "am", "in", "Java", "Hello,", "coding"};
-        assertArrayEquals(expected, sorter.getArrayList().toArray());
+        assertArrayEquals(expected, sorter.getArray());
     }
 }
