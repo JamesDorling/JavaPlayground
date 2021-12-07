@@ -1,5 +1,7 @@
 package challenges;
 
+import core.array_functions.ArraySummer;
+
 import java.util.ArrayList;
 
 public class SumOfMultiples {
@@ -15,17 +17,6 @@ public class SumOfMultiples {
             }
         }
         return numbers;
-    }
-
-    private static int sumUpArray(ArrayList<Integer> list1)
-    {
-        //This function uses a for loop to iterate through each number in an arraylist and add them together.
-        int sum = 0;
-        for(Integer num: list1)
-        {
-            sum += num;
-        }
-        return sum;
     }
 
     private static ArrayList<Integer> removeDupes(ArrayList<Integer> list1, ArrayList<Integer> list2)
@@ -51,7 +42,7 @@ public class SumOfMultiples {
     {
         ArrayList<Integer> multList = getMultiples(upperBound, multiplesOf);
 
-        return sumUpArray(multList);
+        return ArraySummer.sumUpArray(multList);
 
     }
 
@@ -63,7 +54,7 @@ public class SumOfMultiples {
             multList.addAll(getMultiples(upperBounds, multiplesOf[i]));
         }
 
-        return sumUpArray(multList);
+        return ArraySummer.sumUpArray(multList);
 
     }
 }
