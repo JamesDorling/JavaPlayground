@@ -10,6 +10,11 @@ public class FibonacciCounter {
         FibonacciAdd(1, 1, limit);
     }
 
+    public FibonacciCounter(int limit, int num1, int num2)
+    {
+        FibonacciAdd(num1, num2, limit);
+    }
+
     private void FibonacciAdd(Integer num1, Integer num2, int limit)
     {
         Integer newNum = num1 + num2;
