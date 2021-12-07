@@ -17,7 +17,5 @@ public class ArrayMergeTests {
         assertArrayEquals(new Integer[]{0, 1, 2, 2, 3, 3, 4, 5, 5, 6, 7, 7, 8, 9}, merger.getMergedArraySorted());
         assertArrayEquals(new Integer[]{9, 8, 7, 7, 6, 5, 5, 4, 3, 3, 2, 2, 1, 0}, merger.getMergedArraySortedBackwards());
         assertArrayEquals(new Integer[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, merger.getMergedArrayDupeless()); //Must be sorted
-        //ISSUE ONE did not sort list.
-        //ISSUE TWO used wrong index inside the dupeless function to add elements to the result. Was using the contents of the array as the index, which was very, very wrong.
     }
 }

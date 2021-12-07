@@ -40,8 +40,6 @@ public class Challenge5Tests {
 
         // This should flip the names properly
         assertTrue(NameFlipperSplitless.reverseNameListSplitless("James Dorling, Jordan Dorling, Alex Mace").equals("Dorling James, Dorling Jordan, Mace Alex"));
-        //ISSUE ONE this provides square brackets as it converts an arraylist to a string at the end
-        //ISSUE TWO this cuts out the final name because it does not have a comma at the end
     }
 
     @Test
