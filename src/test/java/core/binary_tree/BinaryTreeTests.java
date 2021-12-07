@@ -2,6 +2,7 @@ package core.binary_tree;
 
 import org.junit.jupiter.api.Test;
 import  static org.junit.jupiter.api.Assertions.assertEquals;
+import  static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class BinaryTreeTests {
     BinaryTree tree1 = new BinaryTree(5);
@@ -26,6 +27,21 @@ public class BinaryTreeTests {
         tree1.add(new int[]{9, 6});
         //Hard typing in the route it needs to go through to search.
         assertEquals(tree1.root.right.left.value, BinaryTreeSearch.binaryTreeSearch(tree1.root, 6).value);
+    }
+
+    @Test
+    public void binaryTreeCountTest() {
+        tree1.add(new int[]{9, 6});
+        assertEquals(3, tree1.getNumberOfElements());
+
+    }
+
+    @Test
+    public void binaryTreeGetterTests() {
+        //Tree1, so 5 is already root
+        tree1.add(new int[]{9, 6, 5, 3, 8, 9, 2, 4, 6, 3, 4});
+        assertArrayEquals(new int[]{2, 3, 3, 4, 4, 5, 5, 6, 6, 8, 9, 9}, tree1.getSortedTreeAsc());
+        assertArrayEquals(new int[]{9, 9, 8, 6, 6, 5, 5, 4, 4, 3, 3, 2}, tree1.getSortedTreeDesc());
     }
 
     //Doesnt have a remove yet. I am going to try and make one.

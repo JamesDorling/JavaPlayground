@@ -1,6 +1,10 @@
 package core.binary_tree;
 
-public class BinaryTree {
+import core.bubble_sort.BubbleSortIntArray;
+
+import java.util.ArrayList;
+
+public class BinaryTree implements BinaryTreeI{
     Node root;
 
     //Two constructors. Either setting a root node or setting it to null.
@@ -15,7 +19,7 @@ public class BinaryTree {
     }
 
     //Recursive node addition. Will loop from node until it finds the perfect spot that is null.
-    private static Node addNodeRecursive(Node currentNode, int addedValue)
+    private Node addNodeRecursive(Node currentNode, int addedValue)
     {
         //If the current node is a null, then make a new node with the value.
         if(currentNode == null) {
@@ -34,16 +38,101 @@ public class BinaryTree {
     }
 
     //Add function, triggers the recursive add function on the root.
+    @Override
     public void add(int value) {
         root = addNodeRecursive(root, value);
     }
 
-    //Add function used but for an array. Make it easier to add nodes if you can do them all at once.
-    public void add(int[] valueArray) {
+    @Override
+    public void add(final int[] valueArray) {
         for(int i = 0; i < valueArray.length; i++)
         {
             //Iterate through the array and add each value.
             this.add(valueArray[i]);
         }
+    }
+///////////////////////////////////////////////////////
+    @Override
+    public Node getRootElement() {
+        return root;
+    }
+
+    @Override
+    public int getNumberOfElements() {
+        //Return the number of elements
+        return countElements(this.root);
+    }
+
+    private int countElements(Node rootNode) {
+        //If no root then no elements.
+        if(rootNode == null) {
+            return 0;
+        }
+        //Predefine result
+        int result = 1;
+
+        //recursively go through each child.
+        result += (countElements(rootNode.left) + countElements(rootNode.right));
+        return result;
+    }
+
+    @Override
+    public Node findElement(int value) {
+        return BinaryTreeSearch.binaryTreeSearch(this.root, value);
+    }
+
+    @Override //Getter for element.left.
+    public Node getLeftChild(Node element) {
+        return element.left;
+    }
+
+    @Override //Getter for element.right.
+    public Node getRightChild(Node element) {
+        return element.right;
+    }
+
+    @Override //Getter for the tree's elements. I wanted to return this as an array of ints rather than an arraylist.
+    public int[] getSortedTreeAsc() {
+        //Grab an arraylist of the nodes
+        ArrayList<Integer> nodeList = getNodeList(root);
+        //Grab an arraylist of the nodes
+        int[] result = new int[nodeList.size()];
+        //transform the arraylist into an array of ints.
+        for (int i = 0; i < result.length; i++) {
+            result[i] = nodeList.get(i);
+        }
+        return result;
+    }
+
+    @Override //Getter for the tree's elements backwards. I wanted to return this as an array of ints rather than an arraylist.
+    public int[] getSortedTreeDesc() {
+        //Grab an arraylist of the nodes
+        ArrayList<Integer> nodeList = getNodeList(root);
+        //Grab an arraylist of the nodes
+        int[] result = new int[nodeList.size()];
+        //transform the arraylist into an array of ints, but do it backwards.
+        for (int i = 0; i < nodeList.size(); i++) {
+            result[i] = nodeList.get((result.length - 1) - i);
+        }
+        return result;
+    }
+
+    private ArrayList<Integer> getNodeList(Node rootNode) {
+        //Define an arraylist of nodes
+        ArrayList<Integer> result = new ArrayList<>();
+        //If there is a left node
+        if(getLeftChild(rootNode) != null) {
+            //Recursion of this function to keep adding all nodes on the left
+            result.addAll(getNodeList(getLeftChild(rootNode)));
+        }
+        //Add this node, as it is in the middle.
+        result.add(rootNode.value);
+        //If there is a node on the right
+        if(getRightChild(rootNode) != null) {
+            //Recursion of this function to keep adding all nodes on the right
+            result.addAll(getNodeList(getRightChild(rootNode)));
+        }
+        //Return the result.
+        return result;
     }
 }
