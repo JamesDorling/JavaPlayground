@@ -44,6 +44,13 @@ public class BinaryTreeTests {
         assertArrayEquals(new int[]{9, 9, 8, 6, 6, 5, 5, 4, 4, 3, 3, 2}, tree1.getSortedTreeDesc());
     }
 
+    @Test
+    public void binaryTreeGetRootTest() {
+        tree1.add(new int[]{9, 6});
+        assertEquals(5, tree1.getRootElement().value);
+
+    }
+
     //Doesnt have a remove yet. I am going to try and make one.
     /*
     This is difficult though for this reason:
