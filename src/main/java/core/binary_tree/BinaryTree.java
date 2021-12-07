@@ -23,7 +23,7 @@ public class BinaryTree {
         }
 
         //If the value to be added is less than the current node's value then make a new node at currentNode.left.
-        if(addedValue < currentNode.value) {
+        if(addedValue <= currentNode.value) {
             currentNode.left = addNodeRecursive(currentNode.left, addedValue);
         } //If the value to be added is more than the current node's value then make a new node at currentNode.right.
         else if (addedValue > currentNode.value) {
@@ -37,12 +37,6 @@ public class BinaryTree {
     public void add(int value) {
         root = addNodeRecursive(root, value);
     }
-
-    //Add function, triggers the recursive add function on the root.
-    //public void remove(int value) {
-    //    Node nodeToBeRemoved = BinaryTreeSearch.binaryTreeSearch(this.root, value);
-    //    nodeToBeRemoved.right.left = nodeToBeRemoved.left;
-    //}
 
     //Add function used but for an array. Make it easier to add nodes if you can do them all at once.
     public void add(int[] valueArray) {
