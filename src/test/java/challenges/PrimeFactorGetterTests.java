@@ -1,6 +1,9 @@
 package challenges;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,6 +12,15 @@ import java.util.LongSummaryStatistics;
 import  static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class PrimeFactorGetterTests {
+
+    @BeforeAll
+    static void setupAll(TestInfo testInfo) {
+        System.out.println(testInfo.getTestClass() + " executing");
+    }
+
+    @AfterAll
+    static void tearDownAll(TestInfo testInfo) { System.out.println(testInfo.getTestClass() + " has completely finished testing."); }
+
     @Test
     public void checkPrimeFactorsTest()
     {

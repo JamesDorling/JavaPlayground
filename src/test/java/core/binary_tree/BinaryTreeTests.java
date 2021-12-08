@@ -1,15 +1,29 @@
 package core.binary_tree;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
+
 import  static org.junit.jupiter.api.Assertions.assertEquals;
 import  static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class BinaryTreeTests {
+
+    @BeforeAll
+    static void setupAll(TestInfo testInfo) {
+        System.out.println(testInfo.getTestClass() + " executing");
+    }
+
+    @AfterAll
+    static void tearDownAll(TestInfo testInfo) { System.out.println(testInfo.getTestClass() + " has completely finished testing."); }
+
     BinaryTree tree1 = new BinaryTree(5);
     BinaryTree tree2 = new BinaryTree();
 
     @Test
     public void binaryTreeAddTest() {
+
         //Tests to make sure it adds the nodes in the correct places.
         tree1.add(2);
         tree1.add(3);
