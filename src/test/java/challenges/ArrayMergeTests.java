@@ -19,7 +19,7 @@ public class ArrayMergeTests {
     @BeforeEach
     void setup(TestInfo testInfo) {
         Integer[] list1 = {5, 1, 3, 9, 6, 7, 2}, list2 = {8, 2, 3, 4, 7, 5, 0};
-        ArrayMerge merger = new ArrayMerge(list1, list2);
+        merger = new ArrayMerge(list1, list2);
     }
 
     @Test
