@@ -1,7 +1,5 @@
 package core.binary_tree;
 
-import core.bubble_sort.BubbleSortIntArray;
-
 import java.util.ArrayList;
 
 public class BinaryTree implements BinaryTreeI{
@@ -16,6 +14,21 @@ public class BinaryTree implements BinaryTreeI{
     BinaryTree()
     {
         root = null;
+    }
+
+    //Add function, triggers the recursive add function on the root.
+    @Override
+    public void add(int value) {
+        root = addNodeRecursive(root, value);
+    }
+
+    @Override
+    public void add(final int[] valueArray) {
+        for(int i = 0; i < valueArray.length; i++)
+        {
+            //Iterate through the array and add each value.
+            this.add(valueArray[i]);
+        }
     }
 
     //Recursive node addition. Will loop from node until it finds the perfect spot that is null.
@@ -35,21 +48,6 @@ public class BinaryTree implements BinaryTreeI{
         }
         //Else return currentNode, as the node already exists.
         return currentNode;
-    }
-
-    //Add function, triggers the recursive add function on the root.
-    @Override
-    public void add(int value) {
-        root = addNodeRecursive(root, value);
-    }
-
-    @Override
-    public void add(final int[] valueArray) {
-        for(int i = 0; i < valueArray.length; i++)
-        {
-            //Iterate through the array and add each value.
-            this.add(valueArray[i]);
-        }
     }
 ///////////////////////////////////////////////////////
     @Override
@@ -104,6 +102,7 @@ public class BinaryTree implements BinaryTreeI{
         return result;
     }
 
+    //USE ARRAY FLIPPER?
     @Override //Getter for the tree's elements backwards. I wanted to return this as an array of ints rather than an arraylist.
     public int[] getSortedTreeDesc() {
         //Grab an arraylist of the nodes
