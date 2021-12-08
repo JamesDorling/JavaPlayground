@@ -45,8 +45,8 @@ public class SpartanTests {
     }
 
     @Test
-    @DisplayName("Course test")
-    public void courseTest() {
+    @DisplayName("Course In Future test")
+    public void courseTooLateTest() {
         Assumptions.assumeTrue(spartan.getCourse() != null);
         Assertions.assertTrue(LocalDate.now().isAfter(spartan.getStartDate()));
     }
