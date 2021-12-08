@@ -1,15 +1,12 @@
 package challenges;
 
 import core.array_functions.ArraySummer;
-import core.fibonacci.FibonacciCounter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 import  static org.junit.jupiter.api.Assertions.assertEquals;
-import  static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import  static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EvenFibonacciSumTests {
 

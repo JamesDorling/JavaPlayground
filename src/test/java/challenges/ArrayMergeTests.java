@@ -1,8 +1,6 @@
 package challenges;
 
-import  static org.junit.jupiter.api.Assertions.assertEquals;
 import  static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import  static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.*;
 
@@ -47,7 +45,4 @@ public class ArrayMergeTests {
     public void orderDupelessTest() {
         assertArrayEquals(new Integer[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, merger.getMergedArrayDupeless()); //Must be sorted
     }
-
-
-
 }
