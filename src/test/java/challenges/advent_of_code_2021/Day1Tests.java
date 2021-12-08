@@ -32,4 +32,11 @@ public class Day1Tests {
         Assumptions.assumeTrue(measurements != null);
         Assertions.assertEquals(1288, Day1.getNumberOfIncreases(measurements));
     }
+
+    @Test
+    @DisplayName("Number of Increases Less Noise test")
+    public void increasesNumLessNoiseTest() {
+        Assumptions.assumeTrue(measurements != null);
+        Assertions.assertEquals(1311, Day1.getNumberOfIncreases(Day1.makeArrayIntoThreeWindow(measurements)));
+    }
 }
