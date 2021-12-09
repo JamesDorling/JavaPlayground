@@ -1,4 +1,4 @@
-package advanced_junit;
+package advanced_testing;
 
 import java.time.LocalDate;
 

@@ -1,18 +1,27 @@
-package advanced_junit;
+package advanced_testing;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
-import javax.sound.midi.Soundbank;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SpartanTests {
     private Spartan spartan;
+
+    @Nested
+    @DisplayName("Nested example")
+    class firstTest {
+        @ParameterizedTest()
+        @ValueSource(ints = {1})
+        @DisplayName("InsideNestedExample")
+        void testeroo(int number) {
+            Assertions.assertTrue(number < 10);
+        }
+    }
 
     @BeforeAll
     static void setupAll(TestInfo testInfo) {
