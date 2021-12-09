@@ -97,4 +97,6 @@ public class SpartanTests {
     //void printTest(ArrayList<Integer> array) {
     //    System.out.println(array);
     //}
+    //AssertThrows uses a lambda to check for a specific exception.
+    //AssertDoesNotThrow uses a lambda to check if ANY exception is thrown.
 }

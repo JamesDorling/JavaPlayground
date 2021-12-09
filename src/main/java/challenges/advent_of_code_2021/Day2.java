@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Day2 {
-    public ArrayList<String> getSubmarineFunctions() {
+    public static ArrayList<String> getSubmarineFunctions() {
         //Get the file's scanner
         Scanner functionReader = FileScanner.getScannerForFile("src/main/resources/adventofcodeday2pathing.txt");
         //Predefine result
@@ -19,36 +19,81 @@ public class Day2 {
         return result;
     }
 
-    public int getSubmarineLocation(int currentLocation, ArrayList<String> directions) {
+    public static int[] getSubmarineLocationDepth(int currentHorizontal, int currentDepth, ArrayList<String> directions) {
         for(String direction : directions) {
-            String[] functionSplit = direction.split(" ");
+            String[] functionSplit = direction.replaceAll("\\p{Punct}", "").split(" ");
             switch(functionSplit[0]){
                 case "forward":
-                    currentLocation = moveForwardFunction(Integer.parseInt(functionSplit[1]), currentLocation);
+                    currentHorizontal = moveForwardFunction(Integer.parseInt(functionSplit[1]), currentHorizontal);
+                    break;
+                case "back":
+                    currentHorizontal = moveBackwardFunction(Integer.parseInt(functionSplit[1]), currentHorizontal);
+                    break;
                 case "down":
-                    currentLocation = moveDownFunction(Integer.parseInt(functionSplit[1]), currentLocation);
+                    currentDepth = moveDownFunction(Integer.parseInt(functionSplit[1]), currentDepth);
+                    break;
                 case "up":
-                    currentLocation = moveUpFunction(Integer.parseInt(functionSplit[1]), currentLocation);
+                    currentDepth = moveUpFunction(Integer.parseInt(functionSplit[1]), currentDepth);
+                    break;
+
                 default:
                     System.err.println("Couldnt read function!");
             }
         }
-        return currentLocation;
+        return new int[]{currentHorizontal, currentDepth};
     }
 
-    private int moveForwardFunction(int distance, int currentLocation) {
+    public static int[] getSubmarineLocationAim(int currentHorizontal, int currentDepth, int currentAim, ArrayList<String> directions) {
+        for(String direction : directions) {
+            String[] functionSplit = direction.replaceAll("\\p{Punct}", "").split(" ");
+            switch(functionSplit[0]){
+                case "forward":
+                    currentHorizontal = moveForwardWithAimFunction(Integer.parseInt(functionSplit[1]), currentAim, currentHorizontal);
+                    break;
+                case "back":
+                    currentHorizontal = moveBackwardsWithAimFunction(Integer.parseInt(functionSplit[1]), currentAim, currentHorizontal);
+                    break;
+                case "down":
+                    currentAim = moveDownFunction(Integer.parseInt(functionSplit[1]), currentDepth);
+                    break;
+                case "up":
+                    currentAim = moveUpFunction(Integer.parseInt(functionSplit[1]), currentDepth);
+                    break;
 
-        return 0;
+                default:
+                    System.err.println("Couldnt read function!");
+            }
+        }
+        return new int[]{currentHorizontal, currentDepth};
     }
 
-    private int moveUpFunction(int distance, int currentLocation) {
-
-        return 0;
+    private static int moveForwardFunction(int distance, int currentLocation) {
+        return currentLocation + distance;
     }
 
-    private int moveDownFunction(int distance, int currentLocation) {
+    private static int moveBackwardFunction(int distance, int currentLocation) {
+        return currentLocation - distance;
+    }
 
-        return 0;
+    private static int moveUpFunction(int distance, int currentLocation) {
+        return currentLocation - distance;
+    }
+
+    private static int moveDownFunction(int distance, int currentLocation) {
+        return currentLocation + distance;
+    }
+
+    private static int moveForwardWithAimFunction(int distance, int aim, int currentLocation) {
+        return currentLocation + distance;
+    }
+
+    private static int moveBackwardsWithAimFunction(int distance, int aim, int currentLocation) {
+        return currentLocation + distance;
+    }
+
+    public static void main(String[] args) {
+        int[] location = getSubmarineLocation(0, 0, getSubmarineFunctions());
+        System.out.println(location[0] * location[1]);
     }
 
 }

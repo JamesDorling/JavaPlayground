@@ -21,7 +21,6 @@ public class Day1Tests {
     @Test
     @DisplayName("Read the measurements Test")
     public void readMeasurementsTest() {
-        Assumptions.assumeTrue(measurements != null);
         Integer[] testMeasurements = new Integer[]{measurements.get(0), measurements.get(1)};
         Assertions.assertArrayEquals(new Integer[]{132, 146}, testMeasurements);
     }
@@ -29,14 +28,12 @@ public class Day1Tests {
     @Test
     @DisplayName("Number of Increases test.")
     public void increasesNumTest() {
-        Assumptions.assumeTrue(measurements != null);
         Assertions.assertEquals(1288, Day1.getNumberOfIncreases(measurements));
     }
 
     @Test
     @DisplayName("Number of Increases Less Noise test")
     public void increasesNumLessNoiseTest() {
-        Assumptions.assumeTrue(measurements != null);
         Assertions.assertEquals(1311, Day1.getNumberOfIncreases(Day1.makeArrayIntoThreeWindow(measurements)));
     }
 }
