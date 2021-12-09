@@ -95,11 +95,4 @@ public class Day2 {
     private static int moveDownFunction(int distance, int currentLocation) {
         return currentLocation + distance;
     }
-
-    public static void main(String[] args) {
-        Day2 secondday = new Day2(0, 0, 0);
-        secondday.getSubmarineLocationAim(secondday.getSubmarineFunctions("src/main/resources/adventofcodeday2pathing.txt"));
-        System.out.println(secondday.depth * secondday.position);
-    }
-
 }

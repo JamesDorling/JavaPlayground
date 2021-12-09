@@ -11,6 +11,7 @@ import java.util.Arrays;
 
 public class Day2Tests {
     private static Day2 secondDayAOC;
+
     @BeforeAll
     static void setupAll(TestInfo testInfo) { System.out.println(testInfo.getTestClass() + " executing"); }
 
