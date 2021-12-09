@@ -1,7 +1,6 @@
 package challenges.advent_of_code_2021;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.condition.DisabledIfSystemProperties;
 
 import java.util.ArrayList;
 
