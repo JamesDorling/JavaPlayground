@@ -17,7 +17,7 @@ public class FileScannerTests {
     @Test
     @DisplayName("Can Open a File Test")
     public void fileOpenTest() {
-        File testFile = FileScanner.getFile("src/main/resources/testFile.txt");
+        File testFile = FileScanner.getFile("src/test/resources/testFile.txt");
         Assumptions.assumeTrue(testFile != null);
         Assertions.assertTrue(testFile.getName().equals("testFile.txt"));
     }
@@ -25,7 +25,7 @@ public class FileScannerTests {
     @Test
     @DisplayName("Can Scan a File Test")
     public void fileScanTest() {
-        Scanner testScanner = FileScanner.getScannerForFile("src/main/resources/testFile.txt");
+        Scanner testScanner = FileScanner.getScannerForFile("src/test/resources/testFile.txt");
         Assumptions.assumeTrue(testScanner != null);
         //Can use a for loop as I know exactly how many lines there are.
         int[] result = new int[4];

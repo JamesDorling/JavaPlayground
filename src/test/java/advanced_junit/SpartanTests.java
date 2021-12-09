@@ -1,10 +1,15 @@
 package advanced_junit;
 
 import org.junit.jupiter.api.*;
-import  static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.*;
 
+import javax.sound.midi.Soundbank;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SpartanTests {
     private Spartan spartan;
@@ -64,4 +69,32 @@ public class SpartanTests {
         spartan.setId(3);
         Assertions.assertEquals(3, spartan.getId());
     }
+
+    @ParameterizedTest(name = "[{index}] Testing for value = {arguments}")
+    @ValueSource(ints = {2, 0, 9, 5})
+    @DisplayName("ParameterTestExample")
+    void doTest(int number) {
+        Assertions.assertTrue(number < 10);
+    }
+
+    @ParameterizedTest()
+    //@CsvSource({"James", "Dorling"})
+    @CsvFileSource(resources = "/names.csv")
+    @DisplayName("Testing with CSV values Example")
+    void testingCSV(String name) {
+        Assertions.assertNotEquals("blank", name);
+    }
+
+    public static Stream<Arguments> printArrays() {
+        return Stream.of(
+                Arguments.arguments(1),
+                Arguments.arguments(10)
+        );
+    }
+
+    //@ParameterizedTest
+    //@MethodSource("printArrays")
+    //void printTest(ArrayList<Integer> array) {
+    //    System.out.println(array);
+    //}
 }
