@@ -1,0 +1,17 @@
+Number of each: 
+Nouns: 81
+Pronouns: 51
+Verbs: 92
+Adverbs: 9
+Adjectives: 43
+
+List of words: 
+Nouns: [night, night, house, a, a, mouse, care, while, cap, a, long, a, bed, matter, window, a, breast, snow, a, a, driver, a, moment, it, name, top, top, wall, fly, meet, sky, a, roof, head, a, head, foot, clothes, a, back, a, opening, pack, nose, a, mouth, a, white, snow, a, pipe, smoke, it, head, a, a, broad, face, a, round, a, a, spite, a, eye, a, twist, head, nothing, a, word, work, a, finger, aside, nose, a, team, a, a, a]
+
+Pronouns: [their, their, her, my, our, my, it, his, they, he, them, they, they, my, he, his, his, his, he, his, he, his, his, they, his, his, his, his, his, he, his, it, his, he, he, he, him, myself, his, his, he, his, his, his, he, he, his, his, they, him, he]
+
+Verbs: [house, even, mouse, care, be, while, cap, long, nap, out, clatter, bed, see, matter, like, flash, open, up, moon, breast, snow, appear, be, nick, name, top, top, wall, dash, dash, dash, dry, fly, meet, mount, sky, up, roof, hoof, head, down, bound, head, foot, bundle, back, like, pack, like, nose, like, mouth, up, like, bow, beard, snow, stump, pipe, smoke, head, like, face, round, belly, like, bowlful, plump, right, jolly, saw, spite, wink, eye, twist, head, know, dread, word, work, jerk, finger, nose, nod, up, team, whistle, like, down, exclaim, out, sight]
+
+Adverbs: [not, not, even, soon, lively, more, too, soon, not]
+
+Adjectives: [all, even, that, all, our, long, open, miniature, tiny, little, old, lively, quick, rapid, all, dry, that, wild, full, each, little, all, all, back, merry, little, white, tight, little, round, that, chubby, plump, right, jolly, old, straight, all, giving, all, happy, all, all]

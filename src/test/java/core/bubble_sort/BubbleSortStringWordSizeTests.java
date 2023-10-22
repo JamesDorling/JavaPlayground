@@ -1,6 +1,9 @@
 package core.bubble_sort;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 import org.w3c.dom.ls.LSOutput;
 
 import  static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,6 +14,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BubbleSortStringWordSizeTests {
+
+    @BeforeAll
+    static void setupAll(TestInfo testInfo) {
+        System.out.println(testInfo.getTestClass() + " executing");
+    }
+
+    @AfterAll
+    static void tearDownAll(TestInfo testInfo) { System.out.println(testInfo.getTestClass() + " has completely finished testing."); }
+
     String[] testList = new String[]{"Hello,", "I", "am", "coding", "in", "Java"};
     BubbleSort sorter = new BubbleSortStringWordSize(testList);
 

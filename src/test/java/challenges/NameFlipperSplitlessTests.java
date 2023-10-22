@@ -1,12 +1,23 @@
 package challenges;
 
-import challenges.NameFlipperSplitless;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
 import  static org.junit.jupiter.api.Assertions.assertTrue;
 import  static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class Challenge5Tests {
+public class NameFlipperSplitlessTests {
+
+    @BeforeAll
+    static void setupAll(TestInfo testInfo) {
+        System.out.println(testInfo.getTestClass() + " executing");
+    }
+
+    @AfterAll
+    static void tearDownAll(TestInfo testInfo) { System.out.println(testInfo.getTestClass() + " has completely finished testing."); }
+
     //NameFlipperSplitless fifthChall = new NameFlipperSplitless();
 
     /*
@@ -40,8 +51,6 @@ public class Challenge5Tests {
 
         // This should flip the names properly
         assertTrue(NameFlipperSplitless.reverseNameListSplitless("James Dorling, Jordan Dorling, Alex Mace").equals("Dorling James, Dorling Jordan, Mace Alex"));
-        //ISSUE ONE this provides square brackets as it converts an arraylist to a string at the end
-        //ISSUE TWO this cuts out the final name because it does not have a comma at the end
     }
 
     @Test
