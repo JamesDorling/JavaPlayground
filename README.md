@@ -1,6 +1,9 @@
 # Java Playground
 
-This is where I come to practice Java, be it with coding challenges or just general practice. This is also set up so that I can test my code.
+This is where I come to practice Java, be it with coding challenges or just general practice. This is also 
+set up so that I can test my code.
+There are many 'Main' entrypoints in this application, as this repo is supposed to just be a place for me to make
+a bunch of different things and expand my knowledge of Java, this is not a repo for just one application.
 
 ## Contents
 ### [Challenges](#challenges)

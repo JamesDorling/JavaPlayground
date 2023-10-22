@@ -1,5 +1,6 @@
 package challenges;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterAll;
@@ -19,18 +20,18 @@ public class AscendWordSizesTests {
 
     @Test
     public void correctOrderTest() {
-        assertTrue(AscendWordSizes.ascendWordSizesToString("The order will change").equals("The will order change"));
+        assertEquals("The will order change", AscendWordSizes.ascendWordSizesToString("The order will change"));
     }
 
     @Test
     public void syntaxTest() {
         //No real reason for these not to work, but I figure its worth testing anyway
-        assertTrue(AscendWordSizes.ascendWordSizesToString("!£$%^&? \"|():@~29854 actualword").equals("!£$%^&? actualword \"|():@~29854"));
+        assertEquals("!£$%^&? actualword \"|():@~29854", AscendWordSizes.ascendWordSizesToString("!£$%^&? \"|():@~29854 actualword"));
     }
 
     @Test
     public void blankTest() {
-        assertTrue(AscendWordSizes.ascendWordSizesToString("").equals(""));
+        assertEquals("", AscendWordSizes.ascendWordSizesToString(""));
     }
 
     @Test

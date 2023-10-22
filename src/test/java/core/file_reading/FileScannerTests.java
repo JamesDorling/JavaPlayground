@@ -19,7 +19,7 @@ public class FileScannerTests {
     public void fileOpenTest() {
         File testFile = FileScanner.getFile("src/test/resources/testFile.txt");
         Assumptions.assumeTrue(testFile != null);
-        Assertions.assertTrue(testFile.getName().equals("testFile.txt"));
+        Assertions.assertEquals("testFile.txt", testFile.getName());
     }
 
     @Test
