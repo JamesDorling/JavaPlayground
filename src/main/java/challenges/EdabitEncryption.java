@@ -6,18 +6,16 @@ public class EdabitEncryption {
     public static String encrypt(String message) {
         if(message == null) return null;
 
-        int x = (int) Math.sqrt(message.length()); // This will truncate the double, therefore round down
-        int y = (int) Math.ceil(Math.sqrt(message.length())); // This will round up and return a long. Just need to cast it.
-        System.out.println("x = " + x + "; y = " + y + ";");
         message = message.replaceAll("[ ]", "");
+        int x = (int) Math.floor(Math.sqrt(message.length())); // This will truncate the double, therefore round down
+        int y = (int) Math.ceil(Math.sqrt(message.length())); // This will round up and return a long. Just need to cast it.
         StringBuilder result = new StringBuilder();
-        String[] messageSplit = message.split("(?!^)");
         for (int i = 0; i < y; i++) {
-            for (int j = i; j < message.length(); j+=x) {
-                System.out.print(messageSplit[j]);
-                result.append(messageSplit[j]);
+            for (int j = i; j < message.length(); j+=y) {
+                // System.out.print(messageSplit[j]);
+                result.append(message.charAt(j));
             }
-            System.out.print("\n");
+            // System.out.print("\n");
             result.append(" ");
         }
 
